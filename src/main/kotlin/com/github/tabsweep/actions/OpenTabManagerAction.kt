@@ -1,6 +1,6 @@
-package com.github.tabmanager.actions
+package com.github.tabsweep.actions
 
-import com.github.tabmanager.ui.TabManagerDialog
+import com.github.tabsweep.ui.TabManagerDialog
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 

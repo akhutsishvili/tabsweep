@@ -1,4 +1,4 @@
-package com.github.tabmanager.ui
+package com.github.tabsweep.ui
 
 import com.intellij.icons.AllIcons
 import com.intellij.ui.JBColor

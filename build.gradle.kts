@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.github.tabsweep"
-version = "1.0.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -52,7 +52,7 @@ intellijPlatform {
         
         ideaVersion {
             sinceBuild = "243"
-            untilBuild = "251.*"
+            untilBuild = "253.*"
         }
         
         changeNotes = """

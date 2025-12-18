@@ -25,19 +25,19 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <projectService
-            serviceInterface="com.github.tabmanager.services.TabManagerService"
-            serviceImplementation="com.github.tabmanager.services.TabManagerServiceImpl"/>
+            serviceInterface="com.github.tabsweep.services.TabManagerService"
+            serviceImplementation="com.github.tabsweep.services.TabManagerServiceImpl"/>
     </extensions>
 
     <actions>
         <action
             id="TabManager.OpenDialog"
-            class="com.github.tabmanager.actions.OpenTabManagerAction"
+            class="com.github.tabsweep.actions.OpenTabManagerAction"
             text="TabSweep"
             description="Open the TabSweep dialog to manage open tabs">
-            <keyboard-shortcut keymap="$default" first-keystroke="ctrl O" second-keystroke="B"/>
-            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control O" second-keystroke="B"/>
-            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="control O" second-keystroke="B"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl U" second-keystroke="B"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control U" second-keystroke="B"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="control U" second-keystroke="B"/>
             <add-to-group group-id="WindowMenu" anchor="after" relative-to-action="CloseAllEditors"/>
             <add-to-group group-id="EditorTabPopupMenu" anchor="last"/>
         </action>

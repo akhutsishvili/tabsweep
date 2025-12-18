@@ -1,4 +1,4 @@
-package com.github.tabmanager.ui
+package com.github.tabsweep.ui
 
 import com.intellij.openapi.vfs.VirtualFile
 import org.junit.Assert.*

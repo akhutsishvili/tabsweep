@@ -1,7 +1,7 @@
-package com.github.tabmanager.ui
+package com.github.tabsweep.ui
 
-import com.github.tabmanager.services.TabManagerService
-import com.github.tabmanager.util.FuzzyMatcher
+import com.github.tabsweep.services.TabManagerService
+import com.github.tabsweep.util.FuzzyMatcher
 import com.intellij.openapi.components.service
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
@@ -97,10 +97,6 @@ class TabManagerDialog(private val project: Project) : DialogWrapper(project) {
         selectAllButton.mnemonic = KeyEvent.VK_A
         selectAllButton.addActionListener { selectAll() }
 
-        val deselectAllButton = JButton("Deselect All")
-        deselectAllButton.mnemonic = KeyEvent.VK_D
-        deselectAllButton.addActionListener { deselectAll() }
-
         val closeSelectedButton = JButton("Close Selected")
         closeSelectedButton.mnemonic = KeyEvent.VK_C
         closeSelectedButton.addActionListener { closeSelectedTabs() }
@@ -110,7 +106,6 @@ class TabManagerDialog(private val project: Project) : DialogWrapper(project) {
         closeAndExitButton.addActionListener { doOKAction() }
 
         panel.add(selectAllButton)
-        panel.add(deselectAllButton)
         panel.add(closeSelectedButton)
         panel.add(closeAndExitButton)
 
@@ -274,15 +269,6 @@ class TabManagerDialog(private val project: Project) : DialogWrapper(project) {
         for (i in 0 until listModel.size()) {
             val tabInfo = listModel.getElementAt(i)
             tabInfo.isSelected = true
-            listModel.setElementAt(tabInfo, i)
-        }
-    }
-
-    private fun deselectAll() {
-        // Deselect all visible (filtered) tabs
-        for (i in 0 until listModel.size()) {
-            val tabInfo = listModel.getElementAt(i)
-            tabInfo.isSelected = false
             listModel.setElementAt(tabInfo, i)
         }
     }

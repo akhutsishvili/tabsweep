@@ -127,7 +127,7 @@ Renamed plugin from "TabSweep" to **"TabSweep"**:
 ## Final Architecture
 
 ```
-com.github.tabmanager/
+com.github.tabsweep/
 ├── actions/
 │   └── OpenTabManagerAction      # AnAction - opens dialog on Ctrl+O, B
 ├── services/

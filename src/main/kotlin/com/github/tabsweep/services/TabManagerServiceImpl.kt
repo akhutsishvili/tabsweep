@@ -1,6 +1,6 @@
-package com.github.tabmanager.services
+package com.github.tabsweep.services
 
-import com.github.tabmanager.ui.TabInfo
+import com.github.tabsweep.ui.TabInfo
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.fileEditor.FileEditorManager

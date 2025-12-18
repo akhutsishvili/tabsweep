@@ -1,4 +1,4 @@
-package com.github.tabmanager.util
+package com.github.tabsweep.util
 
 import org.junit.Assert.*
 import org.junit.Test

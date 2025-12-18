@@ -1,0 +1,7 @@
+<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="40" height="40" rx="8" fill="#4A8CF7"/>
+
+  <!-- Letters TS -->
+  <text x="20" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="white" text-anchor="middle">TS</text>
+</svg>

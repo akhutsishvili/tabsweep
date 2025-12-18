@@ -1,4 +1,4 @@
-package com.github.tabmanager.util
+package com.github.tabsweep.util
 
 /**
  * Utility object for fuzzy string matching.
