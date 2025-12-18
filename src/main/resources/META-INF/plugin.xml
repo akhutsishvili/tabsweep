@@ -1,0 +1,45 @@
+<idea-plugin>
+    <id>com.github.tabsweep</id>
+    <name>TabSweep</name>
+    <vendor>TabSweep</vendor>
+
+    <description><![CDATA[
+    Sweep through your tabs with ease. A powerful tab management plugin inspired by Emacs buffer management.
+
+    <h3>Features:</h3>
+    <ul>
+        <li>View all open tabs in a unified popup dialog</li>
+        <li>Fuzzy search to quickly find tabs</li>
+        <li>Select multiple tabs using checkboxes or spacebar</li>
+        <li>Close selected tabs in bulk</li>
+        <li>Keyboard-navigable interface (Up/Down arrows, Spacebar to select)</li>
+        <li>De-duplicated file list (files shown once even if open in multiple splits)</li>
+        <li>Quick close individual tabs with X button</li>
+    </ul>
+
+    <h3>Usage:</h3>
+    <p>Use <code>Ctrl+O, B</code> to open TabSweep.</p>
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectService
+            serviceInterface="com.github.tabmanager.services.TabManagerService"
+            serviceImplementation="com.github.tabmanager.services.TabManagerServiceImpl"/>
+    </extensions>
+
+    <actions>
+        <action
+            id="TabManager.OpenDialog"
+            class="com.github.tabmanager.actions.OpenTabManagerAction"
+            text="TabSweep"
+            description="Open the TabSweep dialog to manage open tabs">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl O" second-keystroke="B"/>
+            <keyboard-shortcut keymap="Mac OS X" first-keystroke="control O" second-keystroke="B"/>
+            <keyboard-shortcut keymap="Mac OS X 10.5+" first-keystroke="control O" second-keystroke="B"/>
+            <add-to-group group-id="WindowMenu" anchor="after" relative-to-action="CloseAllEditors"/>
+            <add-to-group group-id="EditorTabPopupMenu" anchor="last"/>
+        </action>
+    </actions>
+</idea-plugin>
